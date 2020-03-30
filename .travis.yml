@@ -1,0 +1,13 @@
+
+before_install:
+   - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;'"
+install: true
+jdk:
+   - oraclejdk9
+language: java
+packages:
+   - oracle-java8-installer
+script:
+   - "mvn install"
+services:
+   - mysql
