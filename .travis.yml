@@ -3,7 +3,7 @@ before_install:
    - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;'"
 install: true
 jdk:
-   - oraclejdk9
+   - oraclejdk8
 language: java
 packages:
    - oracle-java8-installer
