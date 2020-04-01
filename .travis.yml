@@ -1,6 +1,6 @@
 
 before_script:
-   - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;use employe_bugs;drop table employee,bug,bug_details,comment_thread,commentary,product,product_has_bug;
+   - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;use employe_bugs;
 
 create table if not exists employee
 (employee_id int unique not null auto_increment,
