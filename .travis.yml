@@ -1,6 +1,8 @@
 
 before_install:
-   - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;create table if not exists employee
+   - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;
+use employe_bugs;
+create table if not exists employee
 (employee_id int unique not null auto_increment,
 emp_name varchar(50),
 emp_position varchar(50),
