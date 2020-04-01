@@ -1,20 +1,12 @@
-
-before_script:
-   - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;use employe_bugs;
-
-create table if not exists employee
-(employee_id int unique not null auto_increment,
-emp_name varchar(50),
-emp_position varchar(50),
-PRIMARY  KEY(employee_id)
-);'"
-install: true
-jdk:
-   - oraclejdk15
 language: java
-packages:
-   - oracle-java8-installer
-script:
-   - "mvn install"
+jdk:
+  - oraclejdk13
+sudo: enabled
 services:
-   - mysql
+  - mysql
+before_install:
+  - sudo mysql -e 'DROP DATABASE IF EXISTS employe_bugs;'
+  - sudo mysql -e 'CREATE DATABASE employe_bugs;'
+  - sudo mysql < "createDB.sql"
+  - sudo mysql < "populate.sql"
+script: mvn clean verify
