@@ -1,3 +1,4 @@
+use employe_bugs;
 create table if not exists employee
 (employee_id int unique not null auto_increment,
 emp_name varchar(50),
