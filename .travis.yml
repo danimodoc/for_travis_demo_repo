@@ -1,5 +1,5 @@
 
-before_install:
+before_script:
    - "mysql -e 'CREATE DATABASE IF NOT EXISTS employe_bugs;use employe_bugs;'"
 install: true
 jdk:
