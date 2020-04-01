@@ -7,6 +7,6 @@ services:
 before_install:
   - sudo mysql -e 'DROP DATABASE IF EXISTS employe_bugs;'
   - sudo mysql -e 'CREATE DATABASE employe_bugs;'
-  - sudo mysql < "createDB.sql"
+  - sudo mysql < "tables.sql"
   - sudo mysql < "populate.sql"
 script: mvn clean verify
