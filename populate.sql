@@ -1,3 +1,4 @@
+use employe_bugs;
 insert into employee(emp_name,emp_position)
 values ('John Addams','Soft archi');
 insert into employee(emp_name,emp_position)
