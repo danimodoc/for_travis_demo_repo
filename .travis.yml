@@ -9,4 +9,4 @@ before_install:
   - sudo mysql -e 'CREATE DATABASE employe_bugs;'
   - sudo mysql < "tables.sql"
   - sudo mysql < "populate.sql"
-script: mvn clean verify
+script: mvn clean test
