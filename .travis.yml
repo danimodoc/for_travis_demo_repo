@@ -1,12 +1,12 @@
-language: java
+before_install:
+  - sudo mysql -e 'drop database if exists employe_bugs;'
+  - sudo mysql -e 'crate database employe_bugs;'
+  - sudo mysql < "tables.sql"
+  - sudo mysql < "populate.sql"
 jdk:
-  - oraclejdk13
+  - oraclejdk15
+language: java
 sudo: enabled
 services:
   - mysql
-before_install:
-  - sudo mysql -e 'DROP DATABASE IF EXISTS employe_bugs;'
-  - sudo mysql -e 'CREATE DATABASE employe_bugs;'
-  - sudo mysql < "tables.sql"
-  - sudo mysql < "populate.sql"
 script: mvn clean test
