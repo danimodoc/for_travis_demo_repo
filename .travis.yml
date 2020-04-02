@@ -1,12 +1,13 @@
-before_install:
+before_install: 
+  - sudo mysql -u root --password="dsmodoc";
   - sudo mysql -e 'drop database if exists employe_bugs;'
   - sudo mysql -e 'create database employe_bugs;'
   - sudo mysql < "tables.sql"
   - sudo mysql < "populate.sql"
-jdk:
+jdk: 
   - oraclejdk15
 language: java
-sudo: enabled
-services:
+script: "mvn clean test"
+services: 
   - mysql
-script: mvn clean test
+sudo: enabled
