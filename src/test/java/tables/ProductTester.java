@@ -8,7 +8,7 @@ class ProductTester {
     @Test
     public void testFindById(){
         Product newP = new Product();
-        assertEquals("Archiver Soft",newP.findById(2).getName(),"At id 2 there is archiver soft");
+        assertEquals("Archiver soft",newP.findById(2).getName(),"At id 2 there is archiver soft");
         assertEquals("Speed Soft",newP.findById(1).getName(),"At id 2 there is speed soft");
         assertEquals("Rocket Launcher",newP.findById(3).getName(),"At id 2 there is rocket launcher");
     }
