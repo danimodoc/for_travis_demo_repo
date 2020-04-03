@@ -1,5 +1,3 @@
-drop database if exists employe_bugs;
-create database employe_bugs
 use employe_bugs;
 create table if not exists employee
 (employee_id int unique not null auto_increment,
