@@ -1,3 +1,5 @@
+drop database if exists employe_bugs;
+create database employe_bugs
 use employe_bugs;
 insert into employee(emp_name,emp_position)
 values ('John Addams','Soft archi');
@@ -28,3 +30,6 @@ insert into comment_thread(thread_name,bug_id) values ('Speed soft mistery bug',
 
 insert into commentary(content,thread_id,employee_id) values ('Will check later',1,2),('Found a solution',2,3);
 select * from bug;
+
+#- sudo mysql -e 'drop database if exists employe_bugs;'
+#- sudo mysql -e 'create database employe_bugs;'

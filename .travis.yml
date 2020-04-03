@@ -1,6 +1,5 @@
 before_install: 
-  - sudo mysql -e 'drop database if exists employe_bugs;'
-  - sudo mysql -e 'create database employe_bugs;'
+  
   - sudo mysql < "tables.sql"
   - sudo mysql < "populate.sql"
 mysql:
